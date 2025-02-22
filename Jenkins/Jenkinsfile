@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+    stages {
+        stage('Install NPM') { 
+            steps {
+                sh 'cd hello-react && npm install'
+            }
+        }
+        stage('Build') {
+            steps {
+                sh 'cd hello-react && npm build'
+            }
+        }
+    }
+}
