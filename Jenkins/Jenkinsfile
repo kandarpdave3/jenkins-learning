@@ -14,7 +14,7 @@ pipeline {
                 sh 'cd hello-react && npm run build'
             }
         }
-        steps('Verify') {
+        stage('Verify') {
             steps {
                 sh 'cd hello-react && ls'
             }
